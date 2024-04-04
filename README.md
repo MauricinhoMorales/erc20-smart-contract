@@ -2,6 +2,32 @@
 
 ## Steps
 
+Add the rust-src compiler component:
+
+```bash
+rustup component add rust-src
+```
+
+Install the latest version of cargo-contract:
+
+```bash
+cargo install --force --locked cargo-contract --version 4.0.2
+```
+
+Verify the installation and explore the commands available by running the following command:
+
+```bash
+cargo contract --help
+```
+
+Install the substrate-contract-node
+
+```bash
+cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git --tag v0.39.0
+ --force --locked
+
+```
+
 Run the substrate-contract-node
 
 ```bash
@@ -23,6 +49,9 @@ cargo contract instantiate --constructor new --args 100000 --suri //Alice --salt
 ```
 
 ## Smart Contract Commands
+
+> Update the --contract parameter corresponding to the contract value obtained when instantiated
+> <br/>
 
 ### Get Commands
 
